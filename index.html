@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        
+
+        /* опасити 0, трансформ сеил (0,0) */
+
+        /* body {
+            background-color: rgb(241, 241, 241);
+        } */
+
+        
+        .flex-conteiner {
+            position: fixed;
+            display: flex;
+            justify-content: flex-end;
+            left: 0px;
+            top: 0px;
+            gap: 50px;
+            color: black;
+            padding-top: 20px;
+            padding-right: 100px;
+            height: 40px;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 13px;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            z-index: 1;
+        }
+
+        .trio {
+            padding-right: 300px;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+
+        
+
+        .prm {
+            z-index: 1;
+            position: fixed;
+            width: 40px;
+            height: 150px;
+            background-color: rgb(255, 255, 255);
+            top: 270px;
+            right: 0;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        @keyframes rotation {
+            0% { transform:rotate(0deg);}
+            100% { transform:rotate(360deg);}
+        }
+
+        .shest {
+            position: absolute;
+            animation-name: rotation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            transform-origin: center;
+            animation-timing-function: linear;
+            transform-origin: center;
+            transform: translate(-50%, 0%);
+            width: 25px;
+            height: 25px;
+            left: 8px;
+            top: 7px;
+        }
+        .help {
+            position: absolute;
+            left: 3px;
+            top: 60px;
+        }
+        .corz {
+            position: absolute;
+            left: 7px;
+            top: 110px;
+
+        }
+        
+
+        .photo1 {
+            position: absolute;
+            z-index: -1;
+            background-image: url("https://htmldemo.net/trio/trio/assets/img/rev-slider/home-fashion/pic1.png");
+            top: 0px;
+            left: 0px;
+        }
+        .phototext {
+            position: absolute;
+            top: 270px;
+            left: 25%;
+            font-size: 70px;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            letter-spacing: 20px;
+            text-align: center;
+            /* animation-name: teeext; */
+        }
+
+        .phototext11 {
+            position: absolute;
+            top: 270px;
+            left: 30%;
+            font-size: 70px;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            letter-spacing: 20px;
+            text-align: center;
+            /* animation-name: teeext; */
+        }
+
+        .phototext12 {
+            position: absolute;
+            top: 270px;
+            left: 20%;
+            font-size: 70px;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            letter-spacing: 20px;
+            text-align: center;
+            /* animation-name: teeext; */
+        }
+
+        /* @keyframes teeext {
+            from{opacity: 1;}
+            to {opacity: 0;}
+        } */
+
+        .pa {
+            position: absolute;
+            top: 370px;
+            left: 37.5%;
+            font-size: 20px; 
+            width: 350px;
+        }
+
+        .pa11 {
+            position: absolute;
+            top: 350px;
+            left: 37.5%;
+            font-size: 20px; 
+            width: 350px;
+        }
+
+        
+
+
+/* button {
+    background-color: none;
+}
+        button:hover { background-color: blue; } */
+
+        a {
+            color:rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        a:hover {
+            color:rgb(209, 146, 10);
+        }
+
+
+        .ttt1 {
+            font-size: 25px;
+            font-family: "Poppins", sans-serif;
+            padding-top: 750px;
+            padding-left: 30%;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .ttt2 {
+            position: absolute;
+            font-size: 15px;
+            font-family: "Poppins", sans-serif;
+            padding-left: 20%;
+            font-weight: bold;
+            color: rgb(101, 101, 101); 
+            padding: 20px;
+            width: 550px;
+            text-align: center;
+            left: 350px;
+            letter-spacing: 1px;
+        }
+
+        .flex-conteiner2 {
+            display: flex;
+            gap: 30px;
+            padding-top: 180px;
+            padding-right: 30px;
+            flex-direction: column;
+            float: right;
+        }
+
+        .ttt3 {
+            position: absolute;
+            font-size: 40px;
+            font-family: "Poppins", sans-serif;
+            padding-top: 300px;
+            padding-left: 70px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-weight: bold;
+
+        }
+
+        .ttt4 {
+            position: absolute;
+            font-size: 15px;
+            font-family: "Poppins", sans-serif;
+            padding-left: 40px;
+            color: rgb(101, 101, 101); 
+            padding: 10px;
+            width: 400px;
+            top: 1160px;
+            left: 70px;
+            letter-spacing: 1px;
+        }
+
+
+        /* .botton2 {
+            position: absolute;
+            top: 1400px;
+            left: 170px;
+            font-size: 15px;
+            border: 2px solid rgb(0, 0, 0);  
+            padding: 20px;
+            width: 130px;
+            color: white;
+            background-color: black;
+            text-align: center;
+        } */
+
+        .ss3 {
+            padding-top:950px;
+        }
+
+        .space1 {
+            position: absolute;
+            width: 100%;
+            height: 700px;
+            background-color: rgb(236, 236, 236);
+            z-index: -1;
+            left: 0;
+        }
+
+        .chh {
+            border: 3px solid #222222;
+            border-radius: 50%;
+            color: #222222;
+            display: block;
+            font-weight: 700;
+            font-size: 28px;
+            text-align: center;
+            line-height: 45px;
+            height: 50px;
+            width: 50px;
+        }
+
+        .item1 {
+            top: 50px;
+            position: absolute;
+            font-family: "Poppins", sans-serif;
+            /* left: 400px; */
+        }
+
+        .ttt7 {
+            top: 50px;
+            left: 70px;
+            font-size: 17px;
+            position: absolute;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        
+
+        .tex1 {
+            position: absolute;
+            font-family: "Poppins", sans-serif;
+            font-size: 15px;
+            width: 300px;
+            color: rgb(55, 55, 55);
+        }
+
+        .item-tex1 {
+            left: 70px;
+            top: 100px;
+        }
+
+        
+
+        .item2 {
+            top: 50px;
+            position: absolute;
+            font-family: "Poppins", sans-serif;
+            left: 600px;
+        }
+
+
+        .first {
+            position: absolute;
+            width: 350px;
+            height: 200px;
+            background-color: rgba(137, 43, 226, 0);
+            left: 380px;
+        }
+
+        .second {
+            position: absolute;
+            width: 350px;
+            height: 200px;
+            background-color: rgba(43, 125, 226, 0);
+            left: 800px;
+
+        }
+
+        .therd {
+            position: absolute;
+            width: 350px;
+            height: 200px;
+            background-color: rgba(187, 141, 255, 0);
+            left: 380px;
+            top: 200px;
+        }
+
+        .fourth {
+            position: absolute;
+            width: 350px;
+            height: 200px;
+            background-color: rgba(141, 255, 183, 0);
+            left: 800px;
+            top: 200px;
+        }
+
+        .fifth {
+            position: absolute;
+            width: 350px;
+            height: 200px;
+            background-color: rgba(40, 187, 30, 0);
+            left: 380px;
+            top: 400px;
+        }
+
+        .sixth {
+            position: absolute;
+            width: 350px;
+            height: 200px;
+            background-color: rgba(255, 243, 73, 0);
+            left: 800px;
+            top: 400px;
+        }
+
+
+        .space2 {
+            position: absolute;
+            width: 100%;
+            height: 600px;
+            background-color: rgba(255, 84, 84, 0);
+            z-index: -1;
+            left: 0;
+            top: 750px;
+        }
+
+        .pic6 {
+            position: absolute;
+            top: 250px;
+            left: 100px;
+        }
+
+        .pic7 {
+            position: absolute;
+            top: 250px;
+            left: 430px;
+        }
+
+        .pic8 {
+            position: absolute;
+            top: 50px;
+            left: 760px;
+        }
+
+        .ttt8 {
+            position: absolute;
+            font-family: "Poppins", sans-serif;
+            font-size: 40px;
+            width: 600px;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            padding: 5px;
+            top: 50px;
+            left: 100px;
+        }
+
+        .tex2 {
+            position: absolute;
+            font-family: "Poppins", sans-serif;
+            font-size: 17px;
+            width: 600px;
+            color: rgb(55, 55, 55);
+        }
+
+        .item-tex2 {
+            padding-top: 50px;
+            left: 100px;
+            top: 100px;
+        }
+
+        .color {
+            color: rgb(214, 143, 0);
+        }
+
+        .space3 {
+            background-color: rgb(66, 52, 255);
+            position: absolute;
+            width: 1280px;
+            height: 600px;
+            z-index: -1;
+            left: 0;
+            top: 1450px;
+        }
+
+        .ttt9 {
+            position: absolute;
+            top: 120px;
+            left: 700px;
+            font-size: 50px;
+            /* border: 2px solid rgb(0, 0, 0);   */
+            padding: 20px;
+            width: 500px;
+            /* height: 400px;  */
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .list-reset {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }  
+
+        .list {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        } 
+
+        .item10 {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            opacity: 0;
+            transform: scale(0);
+        } 
+
+        .item img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        } 
+
+
+        .space4 {
+            position: absolute;
+            width: 1280px;
+            height: 720px;
+            background-color: rgb(255, 255, 255);
+            z-index: -1;
+            left: 0;
+            top: 0px;
+        }
+
+
+
+
+        .slideshow {
+            z-index: -1;
+    width: 100%;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+        }
+
+.slideshow-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    animation: slideanim 20s infinite;
+    pointer-events: none;
+    
+}
+.slideshow-item:nth-child(1),
+.slideshow-item:nth-child(1) img {
+    animation-delay: 0;
+}
+.slideshow-item:nth-child(2),
+.slideshow-item:nth-child(2) img {
+    animation-delay: 10s;
+}
+.slideshow-item:nth-child(3),
+.slideshow-item:nth-child(3) img {
+    animation-delay: 20s;
+    
+}
+
+.slideshow-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* animation: zoom 20s infinite; */
+    animation-iteration-count: infinite;
+    animation-name: zoom;
+    animation-duration: 5s;
+    
+}
+.slideshow-item-text {
+    max-width: 50%;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    padding: 20px 30px;
+    font-family: Verdana, sans-serif;   
+}
+.slideshow-item-text h5 {
+    font-size: 22px;
+    margin: 0 0 10px 0;
+    color: #BFE2FF;
+}
+.slideshow-item-text p {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+@keyframes slideanim {
+    0%{
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    100%{
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+@keyframes zoom {
+    50%{
+        transform: scale(1.3);
+    }    
+}
+
+
+@media screen and (max-width: 1100px){
+    .slideshow-item-text{
+        max-width: 75%;
+    }
+}
+@media screen and (max-width: 456px){
+    .slideshow-item-text {
+        bottom: 0;
+        left: 0;
+        max-width: 100%;
+    }
+    .slideshow-item-text h5 {
+        font-size: 18px;
+    }
+    .slideshow-item-text p {
+        font-size: 13px;
+    }
+}
+
+        /* .item20 {
+            animation-name: opac;
+            animation-iteration-count: 1;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            transform-origin: center;
+        }
+
+        @keyframes opac {
+            0% {opacity: 0;}
+            25% {opacity: 1;}
+            50% {opacity: 1;}
+            75% {opacity: 0;}
+        } */
+
+        .space5 {
+            position: absolute;
+            width: 1280px;
+            height: 720px;
+            background-color: rgba(165, 42, 42, 0);
+            top: 2150px;
+        }
+        .tt111 {
+            
+            font-weight: bold;
+            font-size: 30px;
+            padding-left: 580px;
+            letter-spacing: 1px;
+        }
+
+        .tt222 {
+            font-weight: bold;
+            font-size: 20px;
+            padding-left: 400px;
+            color: rgb(101, 101, 101); 
+            width: 450px;
+            text-align: center;
+            padding-top: 30px;
+            letter-spacing: 1px;
+
+        }
+
+
+        .flex-container3 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 50px;
+        }
+
+        .tt11 {
+            padding-top: 20px;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: "Poppins", sans-serif;
+
+        }
+
+        .tex11 {
+            padding-top: 20px;
+            font-weight: bold;
+            font-size: 15px;
+            font-family: "Poppins", sans-serif;
+            color: rgb(101, 101, 101); 
+            width: 350px;
+
+        }
+
+        .keep {
+            padding-top: 20px;
+            font-weight: bold;
+            font-size: 15px;
+            font-family: "Poppins", sans-serif;
+            width: 101px;
+            text-align: left;
+        }
+
+        div.keep {
+            color:rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        div.keep:hover {
+            color:rgb(209, 146, 10);
+        }
+
+        .demo {
+            position: absolute;
+            font-family: "Poppins", sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            width: 90px;
+            text-align: center;
+            left: 70px;
+            top: 180px;
+        }
+
+        div.demo {
+            color:rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        div.demo:hover {
+            color:rgb(209, 146, 10);
+        }
+
+
+        button {
+            background-color: none;
+            position: absolute;
+            top: 1320px;
+            left: 80px;
+            font-size: 15px;
+            border: 2px solid rgb(0, 0, 0);  
+            padding: 5px;
+            width: 180px;
+            height: 60px;
+            color: white;
+            background-color: black;
+            text-align: center;
+            font-family: "Poppins", sans-serif;
+        }
+        button:hover { background-color: rgb(255, 153, 0); color: rgb(255, 255, 255);} 
+
+
+        div.botton {
+            position: absolute;
+            top: 420px;
+            left: 45%;
+            font-size: 20px;
+            border: 2px solid rgb(0, 0, 0); 
+            background-color: rgba(0, 0, 0, 0); 
+            padding: 5px;
+            width: 95px;
+            color:rgb(0, 0, 0);
+            text-decoration: none;
+        }
+
+        div.botton:hover {
+            background-color:rgb(229, 159, 6);
+        }
+
+
+        /* .plus {
+            width: 350px;
+            height: 300px;
+            background-color: rgb(80, 80, 80);
+            z-index: 1;
+        } */
+
+        .pic11 {
+            width: 350px;
+            height: 300px;
+            z-index: -1;
+            top: 0px;
+
+            
+        }
+
+        .space6 {
+            position: absolute;
+            width: 1280px;
+            height: 700px;
+            background-color: brown;
+            top: 2900px;
+            overflow: hidden;
+            flex-basis: 250px; 
+            flex-shrink:1;
+            background-image: url(https://mykaleidoscope.ru/uploads/posts/2021-11/1637257888_87-mykaleidoscope-ru-p-zhenshchina-v-chernom-plate-devushka-krasi-88.jpg);
+            background-size: 100%;
+        }
+
+        .flex-container4 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 150px;
+        }
+
+        .wom1 {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 100px;
+        }
+
+        .ttw1 {
+            padding-top: 100px;
+            color: white;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 35px;
+            /* background-color: aqua; */
+            height: 130px;
+            width: 750px;
+        }
+
+        .name1 {
+            padding-top: 20px;
+            color: white;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .crs {
+            position: absolute;
+            padding-top: 100px;
+            left: 600px;
+            display: flex;
+            gap: 10px;
+            /* flex-direction: column; */
+            justify-content: space-around;
+            /* padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 150px; */
+
+        }
+
+        .crs1 {
+            width: 15px;
+            height: 15px;
+            border-radius: 100px;
+            background-color: white;
+            left: 10px;
+        }
+
+        div.crs1:hover {
+            background-color: rgb(0, 132, 255);
+
+        }
+
+        .space7 {
+            position: absolute;
+            width: 1280px;
+            height: 600px;
+            background-color: brown;
+            top: 3600px;
+        }
+        .end1 {
+            background-color: rgb(255, 255, 255);
+            width: 1280px;
+            height: 200px;
+        }
+
+        .end2 {
+            padding-top: 0px;
+            background-color: rgb(36, 36, 36);
+            width: 1280px;
+            height: 500px;
+        }
+
+        .end3 {
+            background-color: rgb(53, 53, 53);
+            width: 1280px;
+            height: 100px;
+        }
+
+        .flex-container6 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 50px;
+        }
+
+        .logt3 {
+            padding-top: 30px;
+        }
+
+        .flex-container7 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 130px;
+        }
+
+        .yyy {
+            color: white;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            text-transform: uppercase;
+
+        }
+
+        .gray {
+            padding-top: 30px;
+            color: rgb(155, 155, 155);
+            font-family: "Poppins", sans-serif;
+            font-size: 15px;
+        }
+
+        .gray1 {
+            padding-top: 30px;
+            color: rgb(155, 155, 155);
+            font-family: "Poppins", sans-serif;
+            font-size: 15px;
+        }
+
+        .gray1:hover {
+            color: rgb(229, 159, 6);
+        }
+
+
+        .enath {
+            padding-top: 30px;
+            color: white;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .gr2 {
+            width: 200px;
+            line-height: 25px;
+            /* letter-spacing: 1px; */
+        }
+
+        .gr3 {
+            width: 230px;
+            padding-bottom: 30px;
+        }
+
+        .emailsend {
+            position: absolute;
+            /* padding: 10px; */
+            width: 230px;
+            height: 50px;
+            background-color: rgb(87, 87, 87);
+            text-align: left;
+            color: rgb(177, 177, 177);
+            font-family: "Poppins", sans-serif;
+            font-size: 15px;
+        }
+
+        .gr5 {
+            padding-left: 100px;
+            padding-top: 40px;
+        }
+
+        @media (max-width: 580px) {
+            .flex-conteiner {
+            position: fixed;
+            display: flex;
+            justify-content: flex-end;
+            left: 0px;
+            top: 0px;
+            gap: 30px;
+            color: black;
+            padding-top: 20px;
+            padding-right: 100px;
+            height: 40px;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 13px;
+            width: 580px;
+            background-color: rgb(255, 255, 255);
+            z-index: 1;
+        }
+
+        .trio {
+            padding-right: 300px;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="flex-conteiner"> 
+            <div class="trio"><a href="#">TRI-O</a></div>
+            <div class="home"><a href="#">HOME</a></div>
+            <div class="pages"><a href="#">PAGES</a></div>
+            <div class="shop"><a href="#">SHOP</a></div>
+            <div class="blog"><a href="#">BLOG</a></div>
+            <div class="portfolio"><a href="#">PORTFOLIO</a></div>
+            <div class="elements"><a href="#">ELEMENTS</a></div>
+            <div class="cor"><img src="https://cdn-ru.bitrix24.ru/b18220310/landing/9ef/9ef5601e07462bc3245afaa626d431c6/6467eecac294bf28a5a7a4809767ab2b_1x.png", width="20px"></div>
+            <div class="three"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/2048px-Hamburger_icon.svg.png", width="20px"></div>
+        </div>
+    </header>
+
+
+    <div class="prm">
+        <div class="shest"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Gear_icon_svg.svg/640px-Gear_icon_svg.svg.png", width="25px"></div>
+        <div class="help"><img src="https://avatars.mds.yandex.net/i?id=f80761afdcf65ec224760c6457e015282b965fcc6b6d032a-13219746-images-thumbs&n=13", width="35px"></div>
+        <div class="corz"><img src="https://cdn-ru.bitrix24.ru/b18220310/landing/9ef/9ef5601e07462bc3245afaa626d431c6/6467eecac294bf28a5a7a4809767ab2b_1x.png", width="25px"></div>
+    </div>
+
+
+    <div class="space4">
+
+        <div class="slideshow">
+            <div class="slideshow-item">
+                <img src="./pic1.webp">
+                <div class="phototext item20">MINIMALISM</div>
+                <div class="pa">Retina ready, Tri-o looks awesome</div>
+                <div class="botton">BUY NOW</div>
+            </div>
+            <div class="slideshow-item">
+                <img src="./SPACE_0sdsdssssss6.webp">
+                <div class="phototext11 item20">POWERFUL</div>
+                <div class="pa11">Retina ready, Tri-o looks awesome and elegant on all devices and screen sizes.</div>
+                <div class="botton">BUY NOW</div>
+            </div>
+            <div class="slideshow-item">
+                <img src="./afdffdfd.webp">
+                <div class="phototext12 item20">Minimal Jeans</div>
+                <div class="pa"></div>
+            </div>
+        </div>
+    
+    </div>
+        
+
+        <div class="ttt1">Everything you can imagine is tri-o</div>
+        <div class="ttt2">Tri-O is a unique and growing women's fashion brand making hot new trends affordable for everyone.</div>
+
+        <div class="ttt3">Who We Are?</div>
+    
+        <div class="flex-conteiner2">
+        <div class="pic2"><img src="https://htmldemo.net/trio/trio/assets/img/home-fashion/about/02.jpg" width="300px", height="350px"> </div>
+        <div class="pic4"><img src="https://htmldemo.net/trio/trio/assets/img/home-fashion/about/04.jpg" width="300px", height="250px"> </div>
+        </div>
+        <div class="flex-conteiner2">
+    <div class="pic3"><img src="https://htmldemo.net/trio/trio/assets/img/home-fashion/about/01.jpg" width="300px", height="250px"> </div>
+    <div class="pic1"><img src="https://htmldemo.net/trio/trio/assets/img/home-fashion/about/03.jpg" width="300px", height="350px"> </div>
+        </div>
+
+
+        <div class="ttt4">Tri-O has become well known for signature prints and we are constantly looking to find new, innovative and easy to wear prints from all over the world. We pride ourselves on delivering high quality clothing at an affordable price.</div>
+        <button><div class="botton2">DISCOVER MORE</div></button>
+            
+
+
+    <section class="ss3">
+    <div class="space1">
+
+        <div class="first">
+            <div class="chh item1">1</div>
+            <div class="ttt7 item-ttt1">Best Stream</div>
+            <div class="tex1 item-tex1">Everything your favorite artists and friends are posting and reporting on a comprehensive sidebar menu.</div>
+            <div class="demo">View Demo</div>
+        </div>
+
+        <div class="second">
+            <div class="chh item1">2</div>
+            <div class="ttt7 item-ttt1">Suggested tracks</div>
+            <div class="tex1 item-tex1">Tracks you’ll love based on your listening history. Discover new favorites within a familiar groove to you.</div>
+            <div class="demo">View Demo</div>
+        </div>
+
+        <div class="therd">
+            <div class="chh item1">3</div>
+            <div class="ttt7 item-ttt1">Suggested tracks</div>
+            <div class="tex1 item-tex1">Tracks you’ll love based on your listening history. Discover new favorites within a familiar groove to you.</div>
+            <div class="demo">View Demo</div>
+        </div>
+
+        <div class="fourth">
+            <div class="chh item1">4</div>
+            <div class="ttt7 item-ttt1">Suggested tracks</div>
+            <div class="tex1 item-tex1">Tracks you’ll love based on your listening history. Discover new favorites within a familiar groove to you.</div>
+            <div class="demo">View Demo</div>
+        </div>
+
+        <div class="fifth">
+            <div class="chh item1">5</div>
+            <div class="ttt7 item-ttt1">Suggested tracks</div>
+            <div class="tex1 item-tex1">Tracks you’ll love based on your listening history. Discover new favorites within a familiar groove to you.</div>
+            <div class="demo">View Demo</div>
+        </div>
+
+        <div class="sixth">
+            <div class="chh item1">6</div>
+            <div class="ttt7 item-ttt1">Suggested tracks</div>
+            <div class="tex1 item-tex1">Tracks you’ll love based on your listening history. Discover new favorites within a familiar groove to you.</div>
+            <div class="demo">View Demo</div>
+        </div>
+
+
+        <section class="ss4">
+            <div class="space2">
+                <div class="ttt8">An <snap class="color">Unique</snap> Fashion Demo.</div>
+                <div class="tex2 item-tex2">Our key aim is to provide an exciting clothing collection alongside an excellent shopping experience for all our customers.</div>
+                    <div class="pic6"><img src="https://htmldemo.net/trio/trio/assets/img/home-fashion/call-action/01.jpg", width="300px", height="300px"> </div>
+                    <div class="pic7"><img src="https://htmldemo.net/trio/trio/assets/img/home-fashion/call-action/02.jpg", width="300px", height="300px"> </div>
+                    <div class="pic8"><img src="https://htmldemo.net/trio/trio/assets/img/home-fashion/call-action/03.jpg", width="420px", height="550px"> </div>                
+            </div>
+        </section>
+
+
+        <section class="ss5">
+        <div class="space3">
+            <div class="=pic9"><img src="https://htmldemo.net/trio/trio/assets/img/rev-slider/home-fashion/pic1.png", width="1280px", height="600px"> </div>
+            <div class="ttt9"><h3>The Triple Osbourne Pre Fall Collection.</h3></div>
+        </div>
+    </section>
+
+
+
+    <section class="ss6">
+        <div class="space5">
+            
+
+            <div class="tt1 tt111">BLOG</div>
+            <div class="tt2 tt222">Meet excellent blog styles with lots of new features and beautiful easy-to-use layouts.</div>
+
+            <div class="flex-container3">
+            <div class="conteiner11">
+                <div class="pic11"> <div><img src="./blog-thumb-01.webp" width="350px", height="300px"></div></div>
+                <div class="tt11">In The Middle Of A Rainiest</div>
+                <div class="tex11">Camping out under a starry sky, in the middle of a tropical lowland rainforest's is Lorem isem dolor sit amete, consectetur adipisicing elided Quaerat reiciendis.</div>
+                <div class="keep">Keep Reading</div>
+            </div>
+
+            
+            <div class="conteiner22">
+                <div class="pic11"><img src="./blog-thumb-02.webp" width="350px", height="300px"></div>
+                <div class="tt11">Before Heading West</div>
+                <div class="tex11">Before heading west, we did a 10-day mini trip through Vermont, New Hampshire and Maine isem dolor sit amete, consectetur adipisicing elided Quaerat reiciendis.</div>
+                <div class="keep">Keep Reading</div>
+            </div>
+
+
+            
+            <div class="conteiner33">
+                <div class="plus"></div>
+                <div class="pic11"><img src="./blog-thumb-03.webp" width="350px", height="300px"></div>
+                <div class="tt11">Life On The Road</div>
+                <div class="tex11">Artist and writer's William Morris once he said, “Have nothing in your house that you do Lorem isem dolor sit amete, consectetur adipisicing elided Quaerat reiciendis.</div>
+                <div class="keep">Keep Reading</div>
+            </div></div>
+
+            
+        </div>
+    </section>
+
+
+    <section class="ss7">
+        <div class="space6">
+
+            <div class="flex-container4">
+            <div class="ant1">
+                <div class="wom1"><img src="./testimonial-1.webp" width="70px" height="70px"></div>
+                <div class="ttw1">This is absolutely the best theme I have ever used. The design quality is exquisite. Their response time is unheard of.</div>
+                <div class="name1">Jessica Jung</div>
+                <div class="crs">
+                    <div class="crs1"></div>
+                    <div class="crs1"></div>
+                    <div class="crs1"></div>
+                </div>
+            </div>
+            
+
+            <!-- <div class="ant1">
+                <div class="wom1"><img src="./testimonial-2.webp" width="70px" height="70px"></div>
+                <div class="ttw1">This is absolutely the best theme I have ever used. The design quality is exquisite. Their response time is unheard of.</div>
+                <div class="name1">Ken Wheeler</div>
+            </div>
+
+            
+            <div class="ant1">
+                <div class="wom1"><img src="./testimonial-3.webp" width="70px" height="70px"></div>
+                <div class="ttw1">This is absolutely the best theme I have ever used. The design quality is exquisite. Their response time is unheard of.</div>
+                <div class="name1">Sokina Begum</div>
+            </div> -->
+
+        </div>
+    </section>
+
+
+    <section class="ss8">
+        <div class="space7">
+            <div class="end1">
+                <div class="flex-container6">
+            <div><img src="https://htmldemo.net/trio/trio/assets/img/brand-logo/brand-logo-01.png"></div>
+            <div><img src="https://htmldemo.net/trio/trio/assets/img/brand-logo/brand-logo-02.png"></div>
+            <div class="logt3"><img src="https://htmldemo.net/trio/trio/assets/img/brand-logo/brand-logo-03.png"></div>
+            <div><img src="	https://htmldemo.net/trio/trio/assets/img/brand-logo/brand-logo-04.png"></div>
+            </div>
+            </div>
+
+            <div class="end2">
+                <div class="flex-container7">
+                    <div class="cont1">
+                        <div class="yyy">Booking</div>
+                        <div class="gray gr2">Max Weatherall. Productions
+                            562 Sycamore Circle
+                            Atlanta, GA 30342
+                            T: +920364426
+                            <br>Email: your@example.com
+                            www.hastech.company</div>
+                    </div>
+
+                    <div class="cont1">
+                        <div class="yyy">Links</div>
+                        <div class="gray1">Home</div>
+                        <div class="gray1">Shop</div>
+                        <div class="gray1">About us</div>
+                        <div class="gray1">Blog</div>
+                        <div class="gray1">Contact</div>
+                    </div>
+
+                    <div class="cont1">
+                        <div class="yyy">Latest Form Blog</div>
+                        <div class="enath">Work Passionately</div>
+                        <div class="gray">March 9, 2022</div>
+                        <div class="enath">Creating electronic beats in the</div>
+                        <div class="gray">March 8, 2022</div>
+                    </div>
+
+                    <div class="cont1">
+                        <div class="yyy">Get In Touch</div>
+                        <div class="gray gr3">Enter your email and receive the latest news from us.</div>
+                        <div class="emailsend">Enter Email Adress</div>
+                    </div>
+
+            </div>
+            </div>
+
+
+
+            <div class="end3">
+                <div class="gray gr5">Copyright ©2024 TRIO - All Rights Reserved.</div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
